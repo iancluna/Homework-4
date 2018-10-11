@@ -18,16 +18,16 @@
 <script>
 
 function loadXMLDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
     }
   };
-  xhttp.open("GET", "https://jsonplaceholder.typicode.com/users", true);
-  xhttp.responseType = 'text';
-  xhttp.send();
+  request.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+  request.responseType = 'text';
+  request.send();
 
 }
 
